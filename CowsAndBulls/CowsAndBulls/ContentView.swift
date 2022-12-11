@@ -8,14 +8,21 @@
 import SwiftUI
 
 struct ContentView: View {
+    func submitGuess() {
+        print("Hello")
+    }
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            HStack {
+                TextField("Enter a guess...", text: .constant("1234"))
+                Button("Go", action: submitGuess)
+            }
         }
-        .padding()
+        .frame(width: 250)
+        .frame(minHeight: 300)
+        .padding(16)
+        
     }
 }
 

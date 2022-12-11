@@ -10,8 +10,9 @@ import SwiftUI
 @main
 struct CowsAndBullsApp: App {
     var body: some Scene {
-        WindowGroup {
+        Window ("🐮 🐂", id: "main") {
             ContentView()
         }
+        .windowResizability(.contentSize)
     }
 }
